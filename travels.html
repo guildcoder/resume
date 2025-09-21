@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Josefin Sans', sans-serif;
+      background-color: #0b2e2f;
+      color: #e8f5e9;
+      overflow-x: hidden;
+      filter: blur(8px);
+      transition: filter 1s ease;
+    }
+    .banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 46, 47, 0.95);
+      color: #cce8cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 2rem;
+      z-index: 1000;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+    .banner.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 4px solid #1b4d3e;
+      border-radius: 8px;
+      background: #001f1d;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    My wife and I love to travel. We have seen a lot but have even more too see. Here is a live look at a few of my favorite places in the world.
+  </div>
+  <div class="gallery">
+    <iframe src="https://live2.brownrice.com/?sn=apache&em=1&rev=20250529&framed=true"></iframe>
+    <iframe src="https://www.windy.com/webcams/1704994925?38.993,-105.051,9,p:cams"></iframe>
+    <iframe src="https://webcams.windy.com/webcams/stream/1607328816"></iframe>
+    <iframe src="https://www.windy.com/webcams/1700752106?56.631,-4.830,10,p:cams"></iframe>
+    <iframe src="https://www.windy.com/webcams/1345858827?51.408,-1.276,11,p:cams"></iframe>
+    <iframe src="https://go.toya.net.pl/25-kamery/14022-krakow/444414022207-rynek-glowny-2/play"></iframe>
+    <iframe src="https://www.windy.com/webcams/1742849076?39.671,21.569,11,p:cams"></iframe>
+  </div>
+  <script>
+    setTimeout(() => {
+      document.querySelector('.banner').classList.add('hide');
+      document.body.style.filter = 'blur(0)';
+    }, 6000);
+  </script>
+</body>
+</html>
 
